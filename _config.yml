@@ -13,3 +13,8 @@ google_analytics: 'UA-XXXXXXXX-X'
 # Details for the RSS feed generator
 url:            'blog url'
 author:         'Your Name'
+
+comments:
+  provider: duoshuo
+  duoshuo :
+  short_name: lipeng930307
