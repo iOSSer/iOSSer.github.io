@@ -1,10 +1,10 @@
 name: Your New Jekyll Site
-description: Blogging about stuffs
-meta_description: "Your New Jekyll Site, Blogging about stuffs"
+description: iOS开发
+meta_description: "小李飞刀切土豆的技术博客"
 
 markdown: redcarpet
 highlighter: pygments
-logo: false
+logo: true
 paginate: 15
 baseurl: /
 domain_name: 'http://yourblog-domain.com'
