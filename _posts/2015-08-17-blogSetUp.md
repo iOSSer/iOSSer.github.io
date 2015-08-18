@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Jekyll博客搭建"
+title: "Jekyll博客搭建~~"
 date: 2015-01-23
 comments: true
 categories: iOS
