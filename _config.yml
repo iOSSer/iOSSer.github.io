@@ -2,6 +2,18 @@ name: 小李飞刀切土豆的技术博客
 description: <a href='www.baidu.com'>iOS开发</a>
 meta_description: "小李飞刀切土豆的技术博客"
 
+ <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">里脊串的开发随笔</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">途有境而观无垠</a>
+        </h2>
+      
+    </div>
+
+
 markdown: redcarpet
 highlighter: pygments
 logo: true
