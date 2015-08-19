@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "oreData 版本更新"
+title: "CoreData 版本更新"
 date: 2015-08-19
 comments: true
 categories: iOS
