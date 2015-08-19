@@ -1341,7 +1341,7 @@ body:not(.post-template) .post-title {
    ========================================================================== */
 
 @media only screen and (max-width: 200px) {
-
+ 
     .main-nav {
         padding: 15px;
     }
