@@ -25,6 +25,6 @@ Check out the [Jekyll docs][jekyll] for more info on how to get the most out of 
 
 ### 事发时 `_posts`舒服舒服T温冉飞是否沃尔沃人水电费
 
-#####温冉飞fawrfwerWFRVSFFFSWF QSF 😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊😊:
+#####温冉飞fawrfwerWFRVSFFFSWF QSF :
 
 <img src="https://github.com/iOSSer/iOSSer.github.io/blob/master/assets/images/fire_balloon.jpg?raw=true" width="600" height="400">
