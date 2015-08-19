@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 关于我
+title: 吃得慢饿得快
 ---
 
 吃货.
