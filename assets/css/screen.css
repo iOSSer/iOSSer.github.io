@@ -684,9 +684,10 @@ margin on the iframe, cause it breaks stuff. */
     max-height: 40%;
     background: #f5f8fa;
 }
-
+        /*首页标题颜色*/
 .no-cover .page-title {
-    color: rgba(255,255,255,0.8);
+    /*color: rgba(255,255,255,0.8);*/
+    color: rgba(21,147,223,1);
 }
 
 .no-cover .page-description {
