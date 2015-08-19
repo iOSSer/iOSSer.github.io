@@ -1387,7 +1387,7 @@ body:not(.post-template) .post-title {
     }
 
     body:not(.post-template) .post-title {
-        font-size: 1.2rem;
+        font-size: 3.2rem;
     }
 
     hr {
@@ -1729,7 +1729,7 @@ body:not(.post-template) .post-title {
 
 /* Used to fade in title/desc on the home page */
 @-webkit-keyframes fade-in-down {
-    0% {
+/*    0% {
         opacity: 0;
         -webkit-transform: translateY(-10px);
         transform: translateY(-10px);
@@ -1738,10 +1738,10 @@ body:not(.post-template) .post-title {
         opacity: 1;
         -webkit-transform: translateY(0);
         transform: translateY(0);
-    }
+    }*/
 }
 @keyframes fade-in-down {
-    0% {
+/*    0% {
         opacity: 0;
         -webkit-transform: translateY(-10px);
         transform: translateY(-10px);
@@ -1750,7 +1750,7 @@ body:not(.post-template) .post-title {
         opacity: 1;
         -webkit-transform: translateY(0);
         transform: translateY(0);
-    }
+    }*/
 }
 
 /* Used to bounce .scroll-down on home page */
