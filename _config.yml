@@ -39,7 +39,7 @@ meta_description: "awesome"
 
 markdown: redcarpet
 highlighter: pygments
-logo: true
+# logo: true
 paginate: 15
 baseurl: /
 domain_name: 'http://yourblog-domain.com'
