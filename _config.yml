@@ -33,8 +33,8 @@
 # # Disqus comments
 # disqus_shortname: lipeng930307
 
-name: awesome
-description: iOS
+name: iOSSer
+description: iOSSer's Blog
 meta_description: "awesome"
 
 markdown: redcarpet
@@ -87,10 +87,11 @@ descriptions:
 social:
   - name: Twitter
     icon: twitter
-    username: "@TheBenCentra"
-    url: https://twitter.com/TheBenCentra
+    username: "@iosser"
+    url: https://github.com/iosser
     desc: Follow me on Twitter
-    share_url: http://twitter.com/share
+    share_url: nil
+    # http://twitter.com/share
     share_title: ?text=
     share_link: "&amp;url="
 
@@ -98,8 +99,9 @@ social:
     icon: facebook
     username: thebencentra
     url: 
-    desc: Friend me on Facebook
-    share_url: //www.facebook.com/sharer.php
+    desc: no Friend me on Facebook
+    share_url: nil
+    # //www.facebook.com/sharer.php
     share_title: ?t=
     share_link: "&amp;u="
 
