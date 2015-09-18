@@ -72,6 +72,9 @@ comments:
   provider: duoshuo
   duoshuo :
   short_name: lipeng930307
+  
+# Disqus comments
+disqus_shortname: lipeng930307
 
 # Google analytics
 # ga_tracking_id: "UA-XXXX-1"
