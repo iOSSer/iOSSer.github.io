@@ -37,6 +37,20 @@ name: iOSSer
 description: iOSSer's Blog
 meta_description: "awesome"
 
+
+# Site settings
+title: iOSSer's Blog
+subtitle: "A simple yet classy theme for your Jekyll website or blog"
+email: lipeng930307@163.com
+name: iosser
+description: > 
+  A simple yet classy theme for your Jekyll website or blog. THX look
+baseurl: "/centrarium/" # the subpath of your site, e.g. /blog/
+# url: "http://iosser.github.io" # the base hostname & protocol for your site
+cover: "assets/header_image.jpg"
+logo: "assets/logo.png"
+
+
 markdown: redcarpet
 highlighter: pygments
 # logo: true
@@ -46,6 +60,9 @@ domain_name: 'http://yourblog-domain.com'
 google_analytics: 'UA-XXXXXXXX-X'
 cover: "assets/header_image.jpg"
 logo: "assets/logo.png"
+
+
+
 
 # Details for the RSS feed generator
 url:            'blog url'
