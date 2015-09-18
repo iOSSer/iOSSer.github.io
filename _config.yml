@@ -31,7 +31,7 @@ jekyll-archives:
     tag: '/tag/:name/'
 
 # Disqus comments
-disqus_shortname: bencentra
+disqus_shortname: lipeng930307
 
 # Google analytics
 # ga_tracking_id: "UA-XXXX-1"
@@ -83,7 +83,7 @@ social:
   - name: GitHub
     icon: github
     username: bencentra
-    url: https://github.com/bencentra
+    url: https://github.com/iosser
     desc: Fork me on GitHub
     share_url:
     share_title:
@@ -92,9 +92,9 @@ social:
   - name: LinkedIn
     icon: linkedin
     username: Ben Centra
-    url: https://www.linkedin.com/pub/ben-centra/47/769/60a
-    desc: Connect with me on LinkedIn
-    share_url: //www.linkedin.com/shareArticle
+    # url: https://www.linkedin.com/pub/ben-centra/47/769/60a
+    # desc: Connect with me on LinkedIn
+    # share_url: //www.linkedin.com/shareArticle
     share_title: ?mini=true
     share_link: "&amp;url="
 
@@ -103,7 +103,7 @@ social:
     username: 
     url: 
     desc: Add me to your Circles
-    share_url: //plus.google.com/share
+    # share_url: //plus.google.com/share
     share_title: ?title=
     share_link: "&amp;url="
 
