@@ -1,37 +1,58 @@
 # External gems
-gems:
-  - jekyll-archives # Sorry, not GitHub pages friendly!
-  - jekyll-sitemap
+# gems:
+#   - jekyll-archives # Sorry, not GitHub pages friendly!
+#   - jekyll-sitemap
 
-# Site settings
-title: Centrarium
-subtitle: "A simple yet classy theme for your Jekyll website or blog"
-email: lipeng930307@163.com
-name: iosser
-description: > 
-  A simple yet classy theme for your Jekyll website or blog.
-baseurl: "/centrarium/" # the subpath of your site, e.g. /blog/
-# url: "http://iosser.github.io" # the base hostname & protocol for your site
-cover: "assets/header_image.jpg"
-logo: "assets/logo.png"
+# # Site settings
+# title: Centrarium
+# subtitle: "A simple yet classy theme for your Jekyll website or blog"
+# email: lipeng930307@163.com
+# name: iosser
+# description: > 
+#   A simple yet classy theme for your Jekyll website or blog.
+# baseurl: "/centrarium/" # the subpath of your site, e.g. /blog/
+# # url: "http://iosser.github.io" # the base hostname & protocol for your site
+# cover: "assets/header_image.jpg"
+# logo: "assets/logo.png"
 
-# Build settings
-markdown: kramdown
-paginate: 5
-paginate_path: "/page:num/"
+# # Build settings
+# markdown: kramdown
+# paginate: 5
+# paginate_path: "/page:num/"
 
-# Archive settings (see https://github.com/jekyll/jekyll-archives/)
-jekyll-archives: 
-  enabled: 
-    - categories
-    - tags
-  layout: 'archive'
-  permalinks:
-    category: '/category/:name/'
-    tag: '/tag/:name/'
+# # Archive settings (see https://github.com/jekyll/jekyll-archives/)
+# jekyll-archives: 
+#   enabled: 
+#     - categories
+#     - tags
+#   layout: 'archive'
+#   permalinks:
+#     category: '/category/:name/'
+#     tag: '/tag/:name/'
 
-# Disqus comments
-disqus_shortname: lipeng930307
+# # Disqus comments
+# disqus_shortname: lipeng930307
+
+name: awesome
+description: iOS
+meta_description: "awesome"
+
+markdown: redcarpet
+highlighter: pygments
+logo: true
+paginate: 15
+baseurl: /
+domain_name: 'http://yourblog-domain.com'
+google_analytics: 'UA-XXXXXXXX-X'
+
+# Details for the RSS feed generator
+url:            'blog url'
+author:         '吃得慢饿得快'
+
+comments:
+  provider: duoshuo
+  duoshuo :
+  short_name: lipeng930307
 
 # Google analytics
 # ga_tracking_id: "UA-XXXX-1"
