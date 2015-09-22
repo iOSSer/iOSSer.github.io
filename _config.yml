@@ -40,11 +40,11 @@ meta_description: "awesome"
 
 # Site settings
 title: iOSSer's Blog
-subtitle: "A simple yet classy theme for your Jekyll website or blog"
+subtitle: "其实我是一个演员😂"
 email: lipeng930307@163.com
 name: iosser
 description: > 
-  A simple yet classy theme for your Jekyll website or blog. THX look
+  想对我说些什么吗？😂
 baseurl: "/centrarium/" # the subpath of your site, e.g. /blog/
 # url: "http://iosser.github.io" # the base hostname & protocol for your site
 cover: "assets/header_image.jpg"
