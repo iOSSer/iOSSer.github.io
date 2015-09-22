@@ -1,3 +1,13 @@
+---
+layout: post
+title: "CoreData Model Version"
+date: 2015-09-22
+comments: true
+categories: iOS
+tags: [CoreData]
+keywords: CoreData Model Version
+description: 
+---
 
 ## 关于CoreData
 🔨  CoreData 个人认为是 iOS 系统中最好用的数据存储框架，但是使用起来还是不够简洁。不过可以采用第三方的封装库：MagicalRecord  就是一个使用简洁代码封装CoreData的开源库。本文将介绍通过原始方法创建的CoreData项目CoreData版本升级(迁移)的过程。
