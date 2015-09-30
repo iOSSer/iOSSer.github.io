@@ -4,8 +4,8 @@ title: "Global UITableView DataSource"
 date: 2015-09-30
 comments: true
 categories: Objective-C
-tags: [UITableView][DataSource]
-keywords: UITableView DataSource
+tags: [UITableView]
+keywords: UITableView
 description: 
 ---
 
