@@ -16,7 +16,7 @@ description:
 在项目中，有很多界面的UITableViewCell都很简单，Cell高度都一样，不像聊天界面的Cell高度不确定，对于处理这种高度一样、布局简单的Cell，每个界面都要重写一次`UITableViewDataSource`的2个方法：
   <br><br>
   
-  <pre><code class="hljs Objective C">
+  <pre><code class="hljs javascript">
   - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath；
@@ -30,7 +30,7 @@ description:
 
  `LPGlobalTableViewDataSource.h`代码如下:
  
- <pre><code class="hljs Objective C">
+<pre><code class="hljs javascript">
  
  #import <Foundation/Foundation.h>
 
@@ -50,7 +50,7 @@ typedef void(^CellConfigureBlock)(id cell,id item, NSIndexPath *indexPath);
   
  `LPGlobalTableViewDataSource.m`代码如下:
   
- <pre><code class="hljs Objective C">
+<pre><code class="hljs javascript">
 
 #import "LPGlobalTableViewDataSource.h"
 
@@ -100,12 +100,12 @@ typedef void(^CellConfigureBlock)(id cell,id item, NSIndexPath *indexPath);
 #####使用
 
 <!---->```
- <pre><code class="hljs Objective C">
+<pre><code class="hljs objective-c">
  
 _tableViewDataSource = [[LPGlobalTableViewDataSource alloc] initWithItems:_items reuseIdentifier:reuseIdentifier configureCellBlock:^(UITableViewCell *cell, NSDictionary *item, NSIndexPath *indexPath) {
         
-cell.textLabel.text = item.allKeys.lastObject;
-cell.imageView.image = [UIImage imageNamed:item.allValues.lastObject];
+	cell.textLabel.text = item.allKeys.lastObject;
+	cell.imageView.image = [UIImage imageNamed:item.allValues.lastObject];
 }];
 _addressManagerTableView.dataSource = _tableViewDataSource;
 [_addressManagerTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:reuseIdentifier];

@@ -26,7 +26,7 @@ To add a cover image to your post, set the "cover" property in the front matter 
 
 You can use [highlight.js][highlight] to add syntax highlig code snippets:
 
-<pre><code class="hljs Objective C">function demo(string, times) {
+<pre><code class="hljs javascript">function demo(string, times) {
   for (var i = 0; i < times; i++) {
     console.log(string);
   }
