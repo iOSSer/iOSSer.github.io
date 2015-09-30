@@ -16,11 +16,12 @@ description:
 在项目中，有很多界面的UITableViewCell都很简单，Cell高度都一样，不像聊天界面的Cell高度不确定，对于处理这种高度一样、布局简单的Cell，每个界面都要重写一次`UITableViewDataSource`的2个方法：
   <br><br>
   
-  ```
+  <pre><code class="hljs Objective C">
   - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath；
-```
+</code></pre>
+
 这样做未免有些繁琐，而我有是一个比较懒的程序员，能用1行搞定的事情绝不写10行。所以在看了相关的文章对DataSource的封装之后，自己写了一个，希望以后项目中遇到这样的界面就这一个类搞定了。
 <br><br>
 #####DataSource 应该做些什么事情？
@@ -29,7 +30,8 @@ description:
 
  `LPGlobalTableViewDataSource.h`代码如下:
  
- ```
+ <pre><code class="hljs Objective C">
+ 
  #import <Foundation/Foundation.h>
 
 typedef void(^CellConfigureBlock)(id cell,id item, NSIndexPath *indexPath);
@@ -38,8 +40,8 @@ typedef void(^CellConfigureBlock)(id cell,id item, NSIndexPath *indexPath);
 
 - (instancetype) initWithItems:(NSArray *)items reuseIdentifier:(NSString *)reuseIdentifier configureCellBlock:(CellConfigureBlock) cellConfigureBlock;
 @end
+ </code></pre>
  
- ```
   `CellConfigureBlock `这个Block用于在`cellForRowAtIndexPath：`中初始化Cell时，将此Cell及indexPath回传给VC，VC可在Block中自由操作Cell中界面元素的显示。
   <br><br>
   
@@ -48,7 +50,7 @@ typedef void(^CellConfigureBlock)(id cell,id item, NSIndexPath *indexPath);
   
  `LPGlobalTableViewDataSource.m`代码如下:
   
-```
+ <pre><code class="hljs Objective C">
 
 #import "LPGlobalTableViewDataSource.h"
 
@@ -93,19 +95,20 @@ typedef void(^CellConfigureBlock)(id cell,id item, NSIndexPath *indexPath);
 }
 
 @end
-```
+</code></pre>
 
 #####使用
 
-```
-
+<!---->```
+ <pre><code class="hljs Objective C">
+ 
 _tableViewDataSource = [[LPGlobalTableViewDataSource alloc] initWithItems:_items reuseIdentifier:reuseIdentifier configureCellBlock:^(UITableViewCell *cell, NSDictionary *item, NSIndexPath *indexPath) {
         
-        cell.textLabel.text = item.allKeys.lastObject;
-        cell.imageView.image = [UIImage imageNamed:item.allValues.lastObject];
-    }];
-    _addressManagerTableView.dataSource = _tableViewDataSource;
-    [_addressManagerTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:reuseIdentifier];
-    
-```    
+cell.textLabel.text = item.allKeys.lastObject;
+cell.imageView.image = [UIImage imageNamed:item.allValues.lastObject];
+}];
+_addressManagerTableView.dataSource = _tableViewDataSource;
+[_addressManagerTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:reuseIdentifier];
+
+</code></pre>
 是不是简单多了~😏
