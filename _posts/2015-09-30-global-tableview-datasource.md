@@ -3,11 +3,11 @@ layout: post
 title: "Global UITableView DataSource"
 date: 2015-09-30
 comments: true
+author: iOSSer
 categories: Objective-C
-tags: [UITableView]
-keywords: UITableView
-description: 
----
+tags: UITableView
+<!--description: -->
+<!------->
 
 <!--<img src="http://7xl8q7.com1.z0.glb.clouddn.com/Coredata_Create.png" width="900" height="600">-->
 
