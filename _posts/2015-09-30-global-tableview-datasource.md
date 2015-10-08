@@ -14,7 +14,7 @@ cover:  "assets/instacode.png"
 <!--<img src="http://7xl8q7.com1.z0.glb.clouddn.com/Coredata_Create.png" width="900" height="600">-->
 
 ---
-####开始
+
 在项目中，有很多界面的UITableViewCell都很简单，Cell高度都一样，不像聊天界面的Cell高度不确定，对于处理这种高度一样、布局简单的Cell，每个界面都要重写一次`UITableViewDataSource`的2个方法：
   <br><br>
  
@@ -26,7 +26,7 @@ cover:  "assets/instacode.png"
 
 这样做未免有些繁琐，而我有是一个比较懒的程序员，能用1行搞定的事情绝不写10行。所以在看了相关的文章对DataSource的封装之后，自己写了一个，希望以后项目中遇到这样的界面就这一个类搞定了。
 <br><br>
-####DataSource 应该做些什么事情？
+### DataSource 应该做些什么事情？
 
 写这个通用的DataSource无非就是想让`UITableViewDataSource`与VC代码分离，也能使代码更加清晰，我新建了一个类：`LPGlobalTableViewDataSource`
 
@@ -97,7 +97,7 @@ typedef void(^CellConfigureBlock)(id cell,id item, NSIndexPath *indexPath);
 @end
 </code></pre>
 
-####使用
+###使用
 
 <pre><code class="hljs objective-c">
 _tableViewDataSource = [[LPGlobalTableViewDataSource alloc] initWithItems:_items reuseIdentifier:reuseIdentifier configureCellBlock:^(UITableViewCell *cell, NSDictionary *item, NSIndexPath *indexPath) {
