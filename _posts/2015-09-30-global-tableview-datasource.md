@@ -19,44 +19,86 @@ cover:  "assets/instacode.png"
 
 这样做未免有些繁琐，而我有是一个比较懒的程序员，能用1行搞定的事情绝不写10行。所以在看了相关的文章对DataSource的封装之后，自己写了一个，希望以后项目中遇到这样的界面就这一个类搞定了.
 
-## Adding New Posts
+## DataSource 应该做些什么事情？
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+写这个通用的DataSource无非就是想让`UITableViewDataSource`与VC代码分离，也能使代码更加清晰，我新建了一个类：`LPGlobalTableViewDataSource`
 
-### Tags and Categories
+ `LPGlobalTableViewDataSource.h`代码如下:
+ 
+<pre><code class="hljs objectivew-c">
+ #import <Foundation/Foundation.h>
 
-If you list one or more categories or tags in the front matter of your post, they will be included with the post on the page as links. Clicking the link will bring you to an auto-generated archive page for the category or tag, created using the [jekyll-archive][jekyll-archive] gem.
+typedef void(^CellConfigureBlock)(id cell,id item, NSIndexPath *indexPath);
 
-### Cover Images
+@interface LPGlobalTableViewDataSource : NSObject<UITableViewDataSource>
 
-To add a cover image to your post, set the "cover" property in the front matter with the relative URL of the image (i.e. <code>cover: "assets/cover_image.jpg"</code>). 
+- (instancetype) initWithItems:(NSArray *)items reuseIdentifier:(NSString *)reuseIdentifier configureCellBlock:(CellConfigureBlock) cellConfigureBlock;
+@end
+ </code></pre>
 
-### Code Snippets
+  `CellConfigureBlock `这个Block用于在`cellForRowAtIndexPath：`中初始化Cell时，将此Cell及indexPath回传给VC，VC可在Block中自由操作Cell中界面元素的显示。
+  <br><br>
+  
+  `LPGlobalTableViewDataSource`实现了`UITableViewDataSource`协议，也实现了`UITableViewDataSource`中的2个`@required`方法，所以VC中直接使用实现`LPGlobalTableViewDataSource`这个就好了
+  
+  
+ `LPGlobalTableViewDataSource.m`代码如下:
+  
+<pre><code class="hljs objectivew-c">
+#import "LPGlobalTableViewDataSource.h"
 
-You can use [highlight.js][highlight] to add syntax highlig code snippets:
+@interface LPGlobalTableViewDataSource ()
 
-<pre><code class="hljs Objective C">function demo(string, times) {
-  for (var i = 0; i < times; i++) {
-    console.log(string);
-  }
+@property (nonatomic, strong) NSArray *items;
+@property (nonatomic, copy) NSString *reuseIdentifier;
+@property (nonatomic, copy) CellConfigureBlock cellConfigureBlock;
+
+@end
+
+@implementation LPGlobalTableViewDataSource
+
+- (instancetype)initWithItems:(NSArray *)items reuseIdentifier:(NSString *)reuseIdentifier configureCellBlock:(CellConfigureBlock)cellConfigureBlock
+{
+    self = [super init];
+    if (self) {
+        self.items = items;
+        self.reuseIdentifier = reuseIdentifier;
+        self.cellConfigureBlock = cellConfigureBlock ;
+    }
+    return self;
 }
-demo("hello, world!", 10);</code></pre>
 
-### Images
+- (id) itemWithIndexPath:(NSIndexPath *) indexPath
+{
+    return [_items objectAtIndex:indexPath.row];
+}
 
-Lightbox has been enabled for images. To create the link that'll launch the lightbox, add <code>data-lightbox</code> and <code>data-title</code> attributes to an <code>&lt;a&gt;</code> tag around your <code>&lt;img&gt;</code> tag. The result is:
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return _items.count;
+}
 
-<a href="//bencentra.com/assets/images/falcon9_large.jpg" data-lightbox="falcon9-large" data-title="Check out the Falcon 9 from SpaceX">
-  <img src="//bencentra.com/assets/images/falcon9_small.jpg" title="Check out the Falcon 9 from SpaceX">
-</a>
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    id cell = [tableView dequeueReusableCellWithIdentifier:_reuseIdentifier forIndexPath:indexPath];
+    id item = [self itemWithIndexPath:indexPath];
+    !_cellConfigureBlock ?: _cellConfigureBlock(cell, item, indexPath);
+    
+    return cell;
+}
 
-For more information, check out the [Lightbox][lightbox] website.
+@end
+</code></pre>
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
+###使用
 
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
-[highlight]:   https://highlightjs.org/
-[lightbox]:    http://lokeshdhakar.com/projects/lightbox2/
-[jekyll-archive]: https://github.com/jekyll/jekyll-archives
+<pre><code class="hljs Objective C">
+_tableViewDataSource = [[LPGlobalTableViewDataSource alloc] initWithItems:_items reuseIdentifier:reuseIdentifier configureCellBlock:^(UITableViewCell *cell, NSDictionary *item, NSIndexPath *indexPath) {
+        
+cell.textLabel.text = item.allKeys.lastObject;
+cell.imageView.image = [UIImage imageNamed:item.allValues.lastObject];
+}];
+_addressManagerTableView.dataSource = _tableViewDataSource;
+[_addressManagerTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:reuseIdentifier];
+</code></pre>
+是不是简单多了~😏
