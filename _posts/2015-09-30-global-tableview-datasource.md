@@ -14,12 +14,13 @@ cover:  "assets/instacode.png"
 <pre><code class="hljs objectivew-c">    
   - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath； 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+<br><br>
 </code></pre>
 
 这样做未免有些繁琐，而我有是一个比较懒的程序员，能用1行搞定的事情绝不写10行。所以在看了相关的文章对DataSource的封装之后，自己写了一个，希望以后项目中遇到这样的界面就这一个类搞定了。
 
-### DataSource 应该做些什么事情？
+## DataSource 应该做些什么事情？
 
 写这个通用的DataSource无非就是想让`UITableViewDataSource`与VC代码分离，也能使代码更加清晰，我新建了一个类：`LPGlobalTableViewDataSource`
 
