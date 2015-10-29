@@ -8,15 +8,11 @@ categories: Objective-C
 tags: UITableView
 cover:  "assets/instacode.png"
 ---
-<!--description: -->
-<!------->
 
-<!--<img src="http://7xl8q7.com1.z0.glb.clouddn.com/Coredata_Create.png" width="900" height="600">-->
 
----
-
-在项目中，有很多界面的UITableViewCell都很简单，Cell高度都一样，不像聊天界面的Cell高度不确定，对于处理这种高度一样、布局简单的Cell，每个界面都要重写一次`UITableViewDataSource`的2个方法：
-  <br><br>
+在项目中，有很多界面的UITableViewCell都很简单，Cell高度都一样，不像聊天界面的Cell高度不确定，对于处理这种高度一样、布局简单的Cell，每个界面都要重写一次`UITableViewDataSource`的2个方法:
+<!--在项目中，有很多界面的UITableViewCell都很简单，Cell高度都一样，不像聊天界面的Cell高度不确定，对于处理这种高度一样、布局简单的Cell，每个界面都要重写一次`UITableViewDataSource`的2个方法：-->
+ <!-- <br><br>-->
  
 <pre><code class="hljs objectivew-c">    
   - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
@@ -99,7 +95,7 @@ typedef void(^CellConfigureBlock)(id cell,id item, NSIndexPath *indexPath);
 
 ###使用
 
-<pre><code class="hljs objective-c">
+<pre><code class="hljs Objective C">
 _tableViewDataSource = [[LPGlobalTableViewDataSource alloc] initWithItems:_items reuseIdentifier:reuseIdentifier configureCellBlock:^(UITableViewCell *cell, NSDictionary *item, NSIndexPath *indexPath) {
         
 cell.textLabel.text = item.allKeys.lastObject;
