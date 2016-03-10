@@ -1,13 +1,11 @@
 ---
 layout: post
-title: "CoreData Model Version"
-date: 2015-09-22
-comments: true
-categories: iOS
-tags: [CoreData]
-keywords: CoreData Model Version
-description: 
----
+title:  "CoreData Model 版本升级"
+date:   2016-03-10 
+author: lipeng
+categories: ios
+tags:	CoreData 
+cover:  "assets/instacode.png"
 ---
  关于CoreData`1212`
  
