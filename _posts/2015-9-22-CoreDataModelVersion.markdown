@@ -8,7 +8,7 @@ tags:	[CoreData]
 cover:  "assets/instacode.png"
 ---
  
-🔨  `CoreData` 个人认为是 iOS 系统中最好用的数据存储框架，但是使用起来还是不够简洁。不过可以采用第三方的封装库：MagicalRecord  就是一个使用简洁代码封装CoreData的开源库。本文将介绍通过原始方法创建的CoreData项目CoreData版本升级(迁移)的过程。
+`CoreData` 个人认为是 iOS 系统中最好用的数据存储框架，但是使用起来还是不够简洁。不过可以采用第三方的封装库：MagicalRecord  就是一个使用简洁代码封装CoreData的开源库。本文将介绍通过原始方法创建的CoreData项目CoreData版本升级(迁移)的过程。
 
 ## 为什么要进行升级(迁移)
 
