@@ -1,20 +1,20 @@
 ---
 layout: post
 title:  "这个博客好难搞啊"
-date:   2016-03-10 
+date:   2016-03-10 08:43:59
 author: Li Peng
 categories: iOS
 tags:	jekyll welcome 
 cover:  "assets/instacode.png"
 ---
 
-🔨  `CoreData` 个人认为是 iOS 系统中最好用的数据存储框架，但是使用起来还是不够简洁。不过可以采用第三方的封装库：MagicalRecord  就是一个使用简洁代码封装CoreData的开源库。本文将介绍通过原始方法创建的CoreData项目CoreData版本升级(迁移)的过程。
+`CoreData` 个人认为是 iOS 系统中最好用的数据存储框架，但是使用起来还是不够简洁。不过可以采用第三方的封装库：MagicalRecord  就是一个使用简洁代码封装CoreData的开源库。本文将介绍通过原始方法创建的CoreData项目CoreData版本升级(迁移)的过程。
 
 ## 为什么要进行升级(迁移)
 
-⚠️ 在一个使用了CoreData的项目中，如果未做CoreData版本升级处理，而直接在entities中进行新增、删除、修改实体(Entity)或新增、删除、修改实体中的Attibute等操作，运行项目是会崩溃的，真机上直接闪退。这也是有的APP打开就闪退的直接原因！如果项目还没有上线，那就随便改吧，反正闪退之后可以将APP删掉就又可以哦，但是如果项目已经上线了，或者线上已经已经有 >= 1个版本了，这时候直接进行以上操作可就有点危险了！
+在一个使用了CoreData的项目中，如果未做CoreData版本升级处理，而直接在entities中进行新增、删除、修改实体(Entity)或新增、删除、修改实体中的Attibute等操作，运行项目是会崩溃的，真机上直接闪退。这也是有的APP打开就闪退的直接原因！如果项目还没有上线，那就随便改吧，反正闪退之后可以将APP删掉就又可以哦，但是如果项目已经上线了，或者线上已经已经有 >= 1个版本了，这时候直接进行以上操作可就有点危险了！
 
-###开始吧
+### 开始吧
  
  - 新建一个 CoreDataDemo 项目，默认勾选 CoreData 选项。
 
