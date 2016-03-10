@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "CoreData Model 版本升级"
+title:  "CoreData Model Create"
 date:   2016-03-10 
 author: lipeng
 categories: ios
-tags:	CoreData 
+tags:	[CoreData] 
 cover:  "assets/instacode.png"
 ---
  
