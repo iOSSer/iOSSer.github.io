@@ -43,8 +43,7 @@ title: iOSSer's Blog
 subtitle: ""
 email: lipeng930307@163.com
 name: iosser
-description: > 
-  想对我说些什么吗？😂
+description: > 随便写点东西.
 baseurl: "/centrarium/" # the subpath of your site, e.g. /blog/
 # url: "http://iosser.github.io" # the base hostname & protocol for your site
 cover: "assets/header_image.jpg"
@@ -54,7 +53,7 @@ logo: "assets/logo.png"
 markdown: redcarpet
 highlighter: pygments
 # logo: true
-paginate: 15
+paginate: 30
 baseurl: /
 domain_name: 'http://yourblog-domain.com'
 google_analytics: 'UA-XXXXXXXX-X'
